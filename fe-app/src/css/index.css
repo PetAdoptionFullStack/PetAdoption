@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: gray;
 }
 
 code {
@@ -14,7 +15,7 @@ code {
 
 .nav-bar {
   width: 100%;
-  background-color: seashell;
+  background-color: #E9F1F7;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,6 +25,7 @@ code {
 .nav-bar a {
   color: black;
   text-decoration: none;
+  transition: 0.5s;
 }
 
 .nav-bar a:hover{
@@ -32,4 +34,25 @@ code {
 
 .nav-bar a:active {
   background-color: rgb(154, 145, 133);
+}
+
+.img-container img {
+  height: 350px;
+  width: 100%;
+}
+
+.line {
+  border: 3px solid #623CEA;
+}
+
+.search-container h2{
+  color: #54426B;
+}
+
+.search-container input {
+  margin: 20px;
+}
+
+.clicked {
+  background-color: black;
 }

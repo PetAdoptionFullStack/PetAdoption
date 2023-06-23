@@ -13,7 +13,6 @@ export default function Navigation() {
         <Nav.Link href="#">Adopt</Nav.Link>
         <Nav.Link href="#">About us</Nav.Link>
         <Nav.Link href="#">Login</Nav.Link>
-
       </Nav>
     </Container>
   </Navbar>
