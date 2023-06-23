@@ -21,24 +21,15 @@ code {
   height: 50px;
 }
 
-.nav-bar ul {
-  display: flex;
-}
-
-.nav-bar li {
-  list-style: none;
-  padding-left: 50px;
-}
-
 .nav-bar a {
   color: black;
   text-decoration: none;
 }
 
-.nav-bar a:hover {
-  font-size: large;
+.nav-bar a:hover{
+  background-color: antiquewhite;
 }
 
 .nav-bar a:active {
-  font-size: medium;
+  background-color: rgb(154, 145, 133);
 }
