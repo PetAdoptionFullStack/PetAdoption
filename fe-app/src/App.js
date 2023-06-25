@@ -1,12 +1,14 @@
 import './css/App.css'
 import Navigation from './components/Navigation'
-import Body from './components/Body';
+import PetImages from './components/PetImages';
+import Form from './components/Form'
 
 function App(){
   return (
     <div className="App">
       <Navigation />
-      <Body />
+      <PetImages />
+      <Form />
     </div>
   );
 }
