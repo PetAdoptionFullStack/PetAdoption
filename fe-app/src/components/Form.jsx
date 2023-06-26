@@ -1,21 +1,34 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
-import { Country, State } from 'country-state-city';
+import { Country, State, City } from 'country-state-city';
 import Button from 'react-bootstrap/Button';
 
 
-let countryCode = "";
 export default function Form() {
-  const [selectedCountry, setSelectedCountry] = useState(null);
+  const [selectedCountry, setSelectedCountry] = useState("");
+  const [countryCode, setCountryCode] = useState("")
+  const [selectedState, setSelectedState] = useState("");
+  const [stateCode, setStateCode] = useState("");
+  const [selectedCity, setSelectedCity] = useState("");
+
   const countries = Country.getAllCountries();
-  const states = State.getStatesOfCountry(countryCode)
+  const states = State.getStatesOfCountry(countryCode);
+  const cities = City.getCitiesOfState(countryCode, stateCode);
 
   const handleCountryChange = (selectedOption) => {
-    countryCode = selectedOption.value;
+    setCountryCode(selectedOption.value);
     setSelectedCountry(selectedOption);
   };
 
-  
+  const handleStateChange = (selectedOption) => {
+    setSelectedCity(selectedOption.value);
+    setStateCode(selectedOption.value);
+  }
+
+  const handleCityChange = (selectedOption) => {
+    setSelectedCity(selectedOption.value);
+  }
+
   return (
     <>
       <h3 className="my-header">Let's get you started. Enter your location</h3>
@@ -23,7 +36,6 @@ export default function Form() {
         <form action="">
           <Select
             options={countries.map((country) => ({
-              
               value: country.isoCode,
               label: country.name,
             }))}
@@ -39,7 +51,18 @@ export default function Form() {
               label: state.name
             }))}
             className="options"
-            onChange={handleCountryChange}
+            onChange={handleStateChange}
+            />
+          )}
+
+          {selectedState && (
+            <Select
+            options = {cities.map((city) => ({
+              value: city.isoCode,
+              label: city.name
+            }))}
+            className="options"
+            onChange={handleCityChange}
             />
           )}
 
