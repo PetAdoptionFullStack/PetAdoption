@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
 import { Country, State, City } from 'country-state-city';
+import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 
 
@@ -21,19 +22,38 @@ export default function Form() {
   };
 
   const handleStateChange = (selectedOption) => {
-    setSelectedCity(selectedOption.value);
+    setSelectedState(selectedOption.value);
     setStateCode(selectedOption.value);
   }
 
   const handleCityChange = (selectedOption) => {
-    setSelectedCity(selectedOption.value);
+    setSelectedCity(selectedOption.label);
+  }
+
+  const handleSubmit = (event) =>{
+    event.preventDefault(); 
+
+    console.log(selectedCountry, selectedState, selectedCity)
+
+    const locationData = {
+      country: selectedCountry.label,
+      state: selectedState,
+      city: selectedCity
+    }
+
+    axios.post("http://localhost:8080/users/submit", locationData)
+    .then(response => {
+      console.log(response.data);
+    }).catch(error => {
+      console.log(error);
+    })
   }
 
   return (
     <>
       <h3 className="my-header">Let's get you started. Enter your location</h3>
       <section className="getting-started">
-        <form action="">
+        <form onSubmit={handleSubmit}>
           <Select
             options={countries.map((country) => ({
               value: country.isoCode,
@@ -66,7 +86,7 @@ export default function Form() {
             />
           )}
 
-            <Button variant="outline-secondary" className="my-btn">
+            <Button variant="outline-secondary" className="my-btn" type="submit">
                 Search
             </Button>
 
