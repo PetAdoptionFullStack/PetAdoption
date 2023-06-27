@@ -1,23 +1,19 @@
 import './css/App.css';
 import Navigation from './components/Navigation';
-import PetImages from './components/PetImages';
-import Form from './components/Form';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AdoptPage from './components/AdoptPage';
+import Home from './components/Home';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Navigation />      
-        <PetImages />
-        <Form />
+        <Navigation />
+        <Routes>
+        <Route path="/" element={<Home />} />
+          <Route path="/adopt" element={<AdoptPage />} />
+        </Routes>
       </div>
-      
-      <Routes>
-        <Route path="/adopt" element={<AdoptPage />}/>
-      </Routes>
-
     </Router>
   );
 }
