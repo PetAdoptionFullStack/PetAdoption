@@ -11,7 +11,7 @@ export default function Navigation() {
       <Navbar.Brand> <img src={paws} alt="Paws of a dog"/></Navbar.Brand>
       <Nav className="me-auto">
         <Nav.Link href="#">Home</Nav.Link>
-        <Nav.Link href="#">Adopt</Nav.Link>
+        <Nav.Link href="./components/Adopt">Adopt</Nav.Link>
         <Nav.Link href="#">About us</Nav.Link>
         <Nav.Link href="#">Login</Nav.Link>
       </Nav>
