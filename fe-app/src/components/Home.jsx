@@ -5,8 +5,8 @@ import Form from './Form'
 export default function Home() {
   return (
     <>
-        <PetImages />
-        <Form />
+      <PetImages />
+      <Form />
     </>
   )
 }
