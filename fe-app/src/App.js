@@ -1,7 +1,7 @@
 import './css/App.css';
 import Navigation from './components/Navigation';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import AdoptPage from './components/AdoptPage';
+import AdoptPage from './components/Adopt';
 import Home from './components/Home';
 
 function App() {
