@@ -22,9 +22,14 @@ code {
   height: 50px;
 }
 
+.nav-bar img {
+  height: 30px;
+}
+
 .nav-bar a {
   color: black;
   text-decoration: none;
+  margin-left: 20px;
   transition: 0.5s;
 }
 
@@ -53,6 +58,52 @@ code {
   margin: 20px;
 }
 
-.clicked {
-  background-color: black;
+.adopt-links {
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+
+  margin-top: 50px;
+}
+
+.adopt-links .animal-img:hover {
+  background-color: #54426B;
+  transition: 0.2s;
+}
+
+.adopt-links img {
+  height: 150px;
+}
+
+#cat {
+  width: 160px;
+}
+
+.my-header {
+  margin-top: 50px;
+}
+
+.getting-started {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.getting-started form {
+  margin-top: 50px;
+}
+
+.my-btn {
+  margin-left: 30px;
+}
+
+.options {
+  width: 300px;
+}
+
+.getting-started button {
+  margin-top: 30px;
+  margin-right: 30px;
 }
