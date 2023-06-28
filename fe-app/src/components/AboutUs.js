@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 export default function AboutUs(){
   return(
     <div class="about-us">
@@ -14,17 +14,17 @@ export default function AboutUs(){
     <h3>Our Team</h3>
      <div class="team-members">
       <div class="team-member">
-      <img src="team-member1.jpg" alt="team1"/>
+      <img id="ceo" src="https://i5.walmartimages.com/asr/7e3efec8-41ed-4faa-a7c3-c1dc74e17e5a_1.9c36e79775901887652226aab1761bf9.jpeg" alt="team1"/>
       <h4>TEAM1</h4>
       <p>Founder & CEO</p>
     </div>
     <div class="team-member">
-      <img src="team-member2.jpg" alt="team2"/>
+      <img id="specialist" src="https://images.pexels.com/photos/2422290/pexels-photo-2422290.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="team2"/>
       <h4>TEAM2</h4>
       <p>Adoption Specialist</p>
     </div>
     <div class="team-member">
-      <img src="team-member3.jpg" alt="team3"/>
+      <img src="https://wholesalehostingrates.com/images/wholesale-hosting-membership.jpg" alt="team3"/>
       <h4>TEAM3</h4>
       <p>Veterinarian</p>
     </div>
