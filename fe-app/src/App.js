@@ -1,15 +1,20 @@
-import './css/App.css'
-import Navigation from './components/Navigation'
-import PetImages from './components/PetImages';
-import Form from './components/Form'
+import './css/App.css';
+import Navigation from './components/Navigation';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import AdoptPage from './components/AdoptPage';
+import Home from './components/Home';
 
-function App(){
+function App() {
   return (
-    <div className="App">
-      <Navigation />
-      <PetImages />
-      <Form />
-    </div>
+    <Router>
+      <div className="App">
+        <Navigation />
+        <Routes>
+        <Route path="/" element={<Home />} />
+          <Route path="/adopt" element={<AdoptPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

@@ -10,6 +10,6 @@ router.post('/submit', (req, res, next) => {
   const { country, state, city } = req.body;
 
   res.send(`Country: ${country} State: ${state} City: ${city}`);
-})
+});
 
 module.exports = router;
