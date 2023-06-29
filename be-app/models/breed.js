@@ -7,7 +7,7 @@ class BreedModel {
 
      save() {
         const query = {
-            text: `SELECT * FROM Breed `,
+            text: `INSERT INTO "Breed" (breed_name) VALUES ($1) `,
             values: [this.breedName]
         }
 
