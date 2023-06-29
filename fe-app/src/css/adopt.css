@@ -1,0 +1,66 @@
+.create-adoption-container {
+    position: sticky;
+    position: -webkit-sticky;
+    border: 1px solid black;
+    float: right;
+    margin-right: 2rem;
+    margin-top: -30px;
+    width: 150px;
+    height: 30px;
+    background-color: ghostwhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-adoption-container #create-adoption {
+    color: black;
+    text-decoration: none;
+    font-size: larger;
+    transition: 0.3s;
+}
+
+.create-adoption-container #create-adoption:hover {
+    color: red;
+}
+
+.create-adoption-container #create-adoption:active {
+    color: black;
+}
+
+.pet-options-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.pet-options-container .pet-option {
+    margin-top: 30px;
+}
+
+.form-container {
+    display: flex;
+    margin-top: 100px;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container input {
+    display: block;
+}
+
+.form-container .input-field {
+    margin-top: 30px;
+}
+
+.form-container button {
+    margin-top: 20px;
+    background-color: ghostwhite;
+    border: 2px solid black;
+}
+
+.form-container button:active {
+    background-color: gray;
+}
