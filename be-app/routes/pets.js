@@ -17,16 +17,16 @@ router.get('/get-breeds', (req, res, next) => {
     axios.get('https://dog.ceo/api/breeds/list/all').then(response => {
         console.log(Object.keys(response.data.message));
 
-        const breeds = Object.keys(response.data.message)
+        const breeds = Object.keys(response.data.message);
 
         breeds.forEach(breed => {
             const breedModel = new BreedModel(breed);
             breedModel.save();
-        })
+        });
 
     }).catch(err => {
         console.log(err);
-    })
+    });
     
     res.send("Hello");
 });
