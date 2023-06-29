@@ -1,5 +1,5 @@
 import './css/App.css'
-import './css/About.css'
+
 import AboutUs from './components/AboutUs';
 import './css/App.css';
 import Navigation from './components/Navigation';
