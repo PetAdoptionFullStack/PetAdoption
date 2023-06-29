@@ -60,3 +60,5 @@ CREATE TABLE "User"
     pet_id INT,
     FOREIGN KEY (pet_id) REFERENCES "Pet"(id)
 );
+
+SELECT * FROM "Breed";
