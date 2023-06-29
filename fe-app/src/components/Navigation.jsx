@@ -13,7 +13,9 @@ export default function Navigation() {
         <Nav.Link href="#">Home</Nav.Link>
         <Nav.Link href="#">Adopt</Nav.Link>
         <Nav.Link href="#">About us</Nav.Link>
-        <Nav.Link href="#">Login</Nav.Link>
+        <Nav.Link href="#" id="loginButton">Login</Nav.Link>
+        <Nav.Link href="#" id="signupButton">sign Up</Nav.Link>
+
       </Nav>
     </Container>
   </Navbar>
