@@ -30,7 +30,7 @@ router.get('/api', (req, res, next) => {
 
 
 
-router.get('/get-breedss', async (req, res, next) => {
+router.get('/get-breeds', async (req, res, next) => {
     try {
       const breedModel = new BreedModel();
       const breeds = await breedModel.getBreeds();
