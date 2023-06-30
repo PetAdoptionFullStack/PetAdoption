@@ -1,6 +1,3 @@
-\c testPet;
-
-
 CREATE TABLE Country
 (
     id           SERIAL PRIMARY KEY,

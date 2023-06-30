@@ -7,7 +7,7 @@ class BreedModel {
 
      save() {
         const query = {
-            text: `INSERT INTO Breed (breed_name) VALUES ($1) `,
+            text: `INSERT INTO "Breed" (breed_name) VALUES ($1) `,
             values: [this.breedName]
         }
 
@@ -17,8 +17,22 @@ class BreedModel {
             } else {
                 console.log('Inserted successfully')
             }
-        })
+        });
 
+    }
+
+    getBreeds() {
+        return new Promise((resolve, reject) => {
+          const query = `SELECT * FROM "Breed"`;
+      
+          pool.query(query, (err, res) => {
+            if (err) {
+              reject(err);
+            } else {
+              resolve(res.rows);
+            }
+          });
+        });
     }
 }
 
