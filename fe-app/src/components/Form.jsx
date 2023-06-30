@@ -89,7 +89,6 @@ export default function Form() {
             <Button variant="outline-secondary" className="my-btn" type="submit">
                 Search
             </Button>
-
         </form>
       </section>
     </>

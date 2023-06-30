@@ -15,8 +15,6 @@ export default function Navigation() {
         <Nav.Link as={Link} to="/adopt">Adopt</Nav.Link>
         <Nav.Link as={Link} to="/about">About us</Nav.Link>
         <Nav.Link href="#" id="loginButton">Login</Nav.Link>
-        <Nav.Link href="#" id="signupButton">sign Up</Nav.Link>
-
       </Nav>
     </Container>
   </Navbar>
