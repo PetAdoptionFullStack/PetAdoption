@@ -1,0 +1,55 @@
+
+.register {
+  margin: 100px;;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 15px;
+  align-items: center;
+  float:right;
+}
+
+
+.register h4,
+.register h6 {
+  text-align: center;
+}
+
+.register label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.register input[type="text"],
+.register input[type="password"] {
+  width: 300px;
+  padding: 1px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  align-items: center;
+  align-content: center;
+}
+
+.register button {
+  background-color: lightblue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.register a {
+  text-decoration: none;
+}
+
+.register hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.register .center-text {
+  text-align: center;
+}
