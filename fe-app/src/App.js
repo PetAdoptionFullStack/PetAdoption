@@ -1,5 +1,3 @@
-import './css/App.css'
-import './css/about.css'
 import './css/App.css';
 import './css/adopt.css'
 import AboutUs from './components/AboutUs';
