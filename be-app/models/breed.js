@@ -7,13 +7,13 @@ class BreedModel {
 
      save() {
         const query = {
-            text: `INSERT INTO "Breed" (breed_name) VALUES ($1) `,
+            text: `INSERT INTO Breed (breed_name) VALUES ($1) `,
             values: [this.breedName]
         }
 
         pool.query(query, (err, res) => {
             if (err) {
-                console.log(err); 
+                console.log("Error when trying to insert", err); 
             } else {
                 console.log('Inserted successfully')
             }
