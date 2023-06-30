@@ -63,11 +63,6 @@ export default function NewAdoption() {
                 </div>
                 <div className="input-field">
                     <label htmlFor="breed">Breed:</label>
-                    <input
-                        type="text"
-                        id="breed"
-                        value={breed}
-                        onChange={(event) => setBreed(event.target.value)} />
                         <Select
                             options={null}
                             className="options"

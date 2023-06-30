@@ -1,6 +1,7 @@
 import './css/App.css';
-import './css/adopt.css'
-import './css/contact.css'
+import './css/adopt.css';
+import './css/about.css'
+import './css/contact.css';
 import AboutUs from './components/AboutUs';
 import Navigation from './components/Navigation';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';

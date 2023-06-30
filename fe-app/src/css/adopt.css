@@ -7,7 +7,7 @@
     margin-top: -30px;
     width: 150px;
     height: 30px;
-    background-color: ghostwhite;
+    background-color: antiquewhite;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,6 +49,8 @@
 
 .form-container input {
     display: block;
+    margin-left: 60px;
+    width: 190px;
 }
 
 .form-container .input-field {
