@@ -1,6 +1,3 @@
-\c testPet;
-
-
 CREATE TABLE Country
 (
     id           SERIAL PRIMARY KEY,
@@ -36,11 +33,12 @@ CREATE TABLE Pet
     id       SERIAL PRIMARY KEY,
     age      INT          NOT NULL,
     pet_name VARCHAR(255) NOT NULL,
-    type     VARCHAR(255) NOT NULL,
+    pet_type VARCHAR(255) NOT NULL,
+    pet_description TEXT NOT NULL,
     breed_id INT          NOT NULL,
     FOREIGN KEY (breed_id) REFERENCES Breed (id)
 );
 
-INSERT INTO Breed(breed_name) VALUES ('German Shepard');
+INSERT INTO Breed(breed_name) VALUES ('Mixed');
 
 SELECT * FROM Breed;

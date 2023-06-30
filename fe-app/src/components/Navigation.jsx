@@ -11,9 +11,9 @@ export default function Navigation() {
     <Container>
       <Navbar.Brand> <img src={paws} alt="Paws of a dog"/></Navbar.Brand>
       <Nav className="me-auto">
-        <Nav.Link href="#">Home</Nav.Link>
-        <Nav.Link href="#">Adopt</Nav.Link>
-        <Nav.Link href="#">About us</Nav.Link>
+        <Nav.Link as={Link} to="/">Home</Nav.Link>
+        <Nav.Link as={Link} to="/adopt">Adopt</Nav.Link>
+        <Nav.Link as={Link} to="/about">About us</Nav.Link>
         <Nav.Link href="#" id="loginButton">Login</Nav.Link>
         <Nav.Link href="#" id="signupButton">sign Up</Nav.Link>
 

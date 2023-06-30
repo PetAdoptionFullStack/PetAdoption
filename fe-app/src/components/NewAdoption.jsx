@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Select from 'react-select';
 
 export default function NewAdoption() {
     const [name, setName] = useState('');
@@ -7,6 +8,16 @@ export default function NewAdoption() {
     const [breed, setBreed] = useState('');
     const [successMessage, setSuccessMessage] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
+    const breedsList = () => {
+        axios.get("localhost:8080/api/get-breeds").then(response => {
+            console.log(response.data);
+        }).catch((err) => {
+            console.log(err);
+        });
+        
+    }
+
+    breedsList();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -57,6 +68,13 @@ export default function NewAdoption() {
                         id="breed"
                         value={breed}
                         onChange={(event) => setBreed(event.target.value)} />
+                        <Select
+                            options={null}
+                            className="options"
+                            onChange={null}
+                            value={null}
+                        />
+                    
                 </div>
                     <button type="submit">Submit</button>
             </form>

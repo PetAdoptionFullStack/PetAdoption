@@ -9,8 +9,6 @@ import AdoptPage from './components/Adopt';
 import Home from './components/Home';
 import NewAdoption from './components/NewAdoption';
 
-
-function App(){
 function App() {
   return (
     <Router>

@@ -8,12 +8,9 @@ router.post('/new-adoption', (req, res, next) => {
     const { name, age, breed } = req.body;
 
     res.send(`${name} ${age} ${breed}`)
-
 });
 
-
-
-router.get('/get-breeds', (req, res, next) => {
+router.get('/api', (req, res, next) => {
     axios.get('https://dog.ceo/api/breeds/list/all').then(response => {
         console.log(Object.keys(response.data.message));
 
@@ -30,5 +27,21 @@ router.get('/get-breeds', (req, res, next) => {
     
     res.send("Hello");
 });
+
+
+
+router.get('/get-breedss', async (req, res, next) => {
+    try {
+      const breedModel = new BreedModel();
+      const breeds = await breedModel.getBreeds();
+      console.log(breeds);
+      res.json(breeds);
+    } catch (err) {
+      console.log(err);
+      res.status(500).send('Error retrieving breeds');
+    }
+});
+
+
 
 module.exports = router;
