@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Select from 'react-select';
 
@@ -8,16 +8,20 @@ export default function NewAdoption() {
     const [breed, setBreed] = useState('');
     const [successMessage, setSuccessMessage] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
-    const breedsList = () => {
-        axios.get("localhost:8080/api/get-breeds").then(response => {
-            console.log(response.data);
-        }).catch((err) => {
-            console.log(err);
-        });
-        
+    const [breedList, setBreedList] = useState([]);
+    
+    async function getBreeds() {
+        try {
+            const response = await axios.get("http://localhost:8080/pets/get-breeds");
+            setBreedList(response.data);
+        } catch (error) {
+            console.log(error);
+        }
     }
 
-    breedsList();
+    useEffect(() => {
+        getBreeds();
+    }, []);
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -37,6 +41,11 @@ export default function NewAdoption() {
             console.error(error);
         }
     };
+
+    const handleBreedChange = (selectedOption) => {
+        setBreed(selectedOption.value);
+        console.log(selectedOption.value);
+    }
 
   return (
     <>
@@ -64,10 +73,13 @@ export default function NewAdoption() {
                 <div className="input-field">
                     <label htmlFor="breed">Breed:</label>
                         <Select
-                            options={null}
+                            options={breedList.map((breed) => ({
+                                label: breed.breed_name,
+                                value: breed.breed_name
+                            }))}
                             className="options"
-                            onChange={null}
-                            value={null}
+                            onChange={handleBreedChange}
+                            value={breed}
                         />
                     
                 </div>

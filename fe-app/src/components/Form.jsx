@@ -33,8 +33,6 @@ export default function Form() {
   const handleSubmit = (event) =>{
     event.preventDefault(); 
 
-    console.log(selectedCountry, selectedState, selectedCity)
-
     const locationData = {
       country: selectedCountry.label,
       state: selectedState,
