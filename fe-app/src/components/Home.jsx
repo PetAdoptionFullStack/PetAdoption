@@ -1,12 +1,12 @@
 import React from 'react'
 import PetImages from './PetImages'
-import Form from './Form'
+import LocationForm from './LocationForm'
 
 export default function Home() {
   return (
     <>
       <PetImages />
-      <Form />
+      <LocationForm />
     </>
   )
 }

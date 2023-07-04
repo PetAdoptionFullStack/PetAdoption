@@ -42,15 +42,16 @@
 .form-container {
     display: flex;
     margin-top: 100px;
-    height: 500px;
-    align-items: center;
+    height: 550px;
+    background-color: #bac8d3;
     justify-content: center;
 }
 
 .form-container input {
     display: block;
-    margin-left: 60px;
+    margin-left: 50px;
     width: 190px;
+    border-radius: 20px;
 }
 
 .form-container .input-field {
@@ -65,4 +66,8 @@
 
 .form-container button:active {
     background-color: gray;
+}
+
+.form-container .input-field textarea {
+    resize: none;
 }

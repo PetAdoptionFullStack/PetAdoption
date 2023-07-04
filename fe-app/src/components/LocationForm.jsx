@@ -5,7 +5,7 @@ import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 
 
-export default function Form() {
+export default function LocationForm() {
   const [selectedCountry, setSelectedCountry] = useState("");
   const [countryCode, setCountryCode] = useState("")
   const [selectedState, setSelectedState] = useState("");
